@@ -1,0 +1,19 @@
+<h1>Longest Word</h1>
+
+
+<!-- : render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid. -->
+
+
+<p>******** Welcome to the longest word-game!********</p>
+<p>Here is your grid:</p>
+<p>*****************************************************</p>
+<p><%= @grid.join(" ") %></p>
+<p>What's your best shot?</p>
+
+
+<form action="/score">
+  <label for="question">Input a word</label>
+  <input type="text" id="question" name="attempt" placeholder="wordwordword">
+  <input type="hidden" name="grid" value="<%=@grid.join(",")%>">
+  <input type="submit" value="blurp!">
+</form>
